@@ -30,7 +30,6 @@ Plug 'mbbill/undotree'
 Plug 'davidhalter/jedi-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'benekastah/neomake'
-Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ngmy/vim-rubocop'
