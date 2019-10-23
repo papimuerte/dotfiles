@@ -35,8 +35,8 @@ set history=1000          " Remember more commands and search history
 set undolevels=1000       " Use many muchos levels of undo
 set scrolloff=4           " Keep 4 lines off the edges of the screen when
                           "   scrolling
-set t_Co=256              " Pretty colours
-let base16colorspace=256  " Access colors present in 256 colorspace
+"set t_Co=256              " Pretty colours
+"let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark       " Setting background to dark
 set nowrap                        " Don't wrap lines
 set tabstop=2                     " A tab is 2 spaces
@@ -66,7 +66,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'mileszs/ack.vim'
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Plug 'majutsushi/tagbar'
 "Plug 'godlygeek/tabular'
 Plug 'akiomik/git-gutter-vim'
