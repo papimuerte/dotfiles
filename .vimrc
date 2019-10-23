@@ -90,6 +90,6 @@ Plug 'sheerun/vim-polyglot'
 " Colour schemes
 Plug 'vim-scripts/Colour-Sampler-Pack'
 Plug 'chriskempson/base16-vim'
-Plug 'articicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 " End vim-plug shenanigans
 call plug#end()
