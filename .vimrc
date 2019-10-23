@@ -56,7 +56,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 " Tools
-Plug 'tpope/vim-git'
+"Plug 'tpope/vim-git'
 "Plug 'tpope/vim-fugitive'
 "Plug 'tpope/vim-unimpaired'
 "Plug 'tpope/vim-surround'
@@ -75,9 +75,9 @@ Plug 'akiomik/git-gutter-vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 "Plug 'benekastah/neomake'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-ruby/vim-ruby'
+"Plug 'vim-ruby/vim-ruby'
 Plug 'ngmy/vim-rubocop'
-Plug 'vim-scripts/vim-rubyformat'
+"Plug 'vim-scripts/vim-rubyformat'
 "Plug 'w0rp/ale'
 
 " Langs
