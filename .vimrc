@@ -35,9 +35,9 @@ set history=1000          " Remember more commands and search history
 set undolevels=1000       " Use many muchos levels of undo
 set scrolloff=4           " Keep 4 lines off the edges of the screen when
                           "   scrolling
-set t_Co=256              " Pretty colours
-let base16colorspace=256  " Access colors present in 256 colorspace
-set background=dark       " Setting background to dark
+"set t_Co=256              " Pretty colours
+"let base16colorspace=256  " Access colors present in 256 colorspace
+"set background=dark       " Setting background to dark
 set nowrap                        " Don't wrap lines
 set tabstop=2                     " A tab is 2 spaces
 set shiftwidth=2                  " An autoindent is 2 spaces
@@ -50,7 +50,7 @@ set shiftround                    " use multiple of shiftwidth when indenting
 set smarttab                      " Insert tabs on start of line according to
                                   "   shiftwidth, not tabstop
 " Setting default colourscheme
-silent! colorscheme base16-dracula
+silent! colorscheme nord
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -90,6 +90,6 @@ Plug 'sheerun/vim-polyglot'
 " Colour schemes
 Plug 'vim-scripts/Colour-Sampler-Pack'
 Plug 'chriskempson/base16-vim'
-
+Plug 'articicestudio/nord-vim'
 " End vim-plug shenanigans
 call plug#end()
