@@ -79,6 +79,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ngmy/vim-rubocop'
 "Plug 'vim-scripts/vim-rubyformat'
 "Plug 'w0rp/ale'
+Plug 'sheerun/vim-polyglot'
 
 " Langs
 "Plug 'tpope/vim-markdown'
