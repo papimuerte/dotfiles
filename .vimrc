@@ -67,6 +67,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
 "Plug 'majutsushi/tagbar'
 "Plug 'godlygeek/tabular'
 Plug 'akiomik/git-gutter-vim'
