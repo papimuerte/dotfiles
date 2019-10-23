@@ -35,8 +35,8 @@ set history=1000          " Remember more commands and search history
 set undolevels=1000       " Use many muchos levels of undo
 set scrolloff=4           " Keep 4 lines off the edges of the screen when
                           "   scrolling
-"set t_Co=256              " Pretty colours
-"let base16colorspace=256  " Access colors present in 256 colorspace
+set t_Co=256              " Pretty colours
+let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark       " Setting background to dark
 set nowrap                        " Don't wrap lines
 set tabstop=2                     " A tab is 2 spaces
@@ -50,7 +50,7 @@ set shiftround                    " use multiple of shiftwidth when indenting
 set smarttab                      " Insert tabs on start of line according to
                                   "   shiftwidth, not tabstop
 " Setting default colourscheme
-"silent! colorscheme base16-atelierlakeside
+silent! colorscheme base16-dracula
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -68,7 +68,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'Shougo/neosnippet-snippets'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'majutsushi/tagbar'
 "Plug 'godlygeek/tabular'
 Plug 'akiomik/git-gutter-vim'
