@@ -9,7 +9,7 @@ set number
 
 " Basic settings
 
-let mapleader=","         " Change leader key from \ to ,
+let mapleader=";"         " Change leader key from \ to ,
 let maplocalleader="\\"   " Set local leader to \\
 set hidden                " Hide buffers instead of closing
 set showmatch             " Show matching parantesis
@@ -57,32 +57,32 @@ call plug#begin('~/.vim/plugged')
 
 " Tools
 Plug 'tpope/vim-git'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-eunuch'
-Plug 'mileszs/ack.vim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'bling/vim-airline'
-Plug 'majutsushi/tagbar'
-Plug 'godlygeek/tabular'
+"Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-unimpaired'
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-repeat'
+"Plug 'tpope/vim-eunuch'
+"Plug 'mileszs/ack.vim'
+"Plug 'Shougo/neosnippet.vim'
+"Plug 'Shougo/neosnippet-snippets'
+"Plug 'bling/vim-airline'
+"Plug 'majutsushi/tagbar'
+"Plug 'godlygeek/tabular'
 Plug 'akiomik/git-gutter-vim'
-Plug 'mbbill/undotree'
-Plug 'davidhalter/jedi-vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
-Plug 'benekastah/neomake'
+"Plug 'mbbill/undotree'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+"Plug 'benekastah/neomake'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ngmy/vim-rubocop'
 Plug 'vim-scripts/vim-rubyformat'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 
 " Langs
-Plug 'tpope/vim-markdown'
-Plug 'fatih/vim-go'
+"Plug 'tpope/vim-markdown'
+"Plug 'fatih/vim-go'
 
 " Colour schemes
 Plug 'vim-scripts/Colour-Sampler-Pack'
