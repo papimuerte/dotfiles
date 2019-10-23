@@ -50,7 +50,7 @@ set shiftround                    " use multiple of shiftwidth when indenting
 set smarttab                      " Insert tabs on start of line according to
                                   "   shiftwidth, not tabstop
 " Setting default colourscheme
-silent! colorscheme base16-atelierlakeside
+"silent! colorscheme base16-atelierlakeside
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
