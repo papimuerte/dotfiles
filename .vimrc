@@ -1,56 +1,100 @@
-" Some defaults
-set nocompatible " We're running Vim, not Vi!
-syntax on " Enable syntax highlighting
-filetype on " Enable filetype detection
-filetype indent on " Enable filetype-specific indenting
-filetype plugin on " Enable filetype-specific plugins
-set encoding=utf-8
-set number
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
 
-" Basic settings
+" source ~/.vimrc.before if it exists.
+if filereadable(expand("~/.vimrc.before"))
+source ~/.vimrc.before
+endif
 
-let mapleader=";"         " Change leader key from \ to ,
-let maplocalleader="\\"   " Set local leader to \\
-set hidden                " Hide buffers instead of closing
-set showmatch             " Show matching parantesis
-set nrformats=            " Treat all numerals as decimals
-set nobackup              " Don't keep backup files, it's 70's style cluttering
-set noswapfile            " Don't write annoying intermediate swap files,
-                          "   who did ever restore from swap files anyway?
-set undofile              " Persistent undos
-set undodir=$HOME/.vim/undo " Where to save undo histories
-set undolevels=1000       " How many undos
-set undoreload=10000      " Number of lines to save for undo
-set viminfo='20,\"80      " Read / Write a .viminfo file, don't store more
-                          "   than 80 lines of registers
-set title                 " Change the terminal's title
-set visualbell            " Don't beep
-set t_vb=                 " Don't flash
-set noerrorbells          " Don't beep
-set showcmd               " Show (partial) command in the last line of the
-                          "   screen this also shows visual selection info
-set nomodeline            " Disable mode lines (security measure)
-set cursorline            " Underline the current line, for quick orientation
-set history=1000          " Remember more commands and search history
-set undolevels=1000       " Use many muchos levels of undo
-set scrolloff=4           " Keep 4 lines off the edges of the screen when
-                          "   scrolling
-"set t_Co=256              " Pretty colours
-"let base16colorspace=256  " Access colors present in 256 colorspace
-"set background=dark       " Setting background to dark
-set nowrap                        " Don't wrap lines
-set tabstop=2                     " A tab is 2 spaces
-set shiftwidth=2                  " An autoindent is 2 spaces
-set expandtab                     " Use spaces, not tabs
-set backspace=indent,eol,start    " Backspace through everything in insert mode
-set autoindent                    " Always autoindent
-set copyindent                    " Copy previous indentation on autoindenting
-set shiftround                    " use multiple of shiftwidth when indenting
-                                  "   with '<' and '>'
-set smarttab                      " Insert tabs on start of line according to
-                                  "   shiftwidth, not tabstop
-" Setting default colourscheme
-silent! colorscheme nord
+" ================ General Config ====================
+
+execute pathogen#infect()
+set number                      "Line numbers are good
+set backspace=indent,eol,start  "Allow backspace in insert mode
+set history=1000                "Store lots of :cmdline history
+set showcmd                     "Show incomplete cmds down the bottom
+set showmode                    "Show current mode down the bottom
+set gcr=a:blinkon0              "Disable cursor blink
+set visualbell                  "No sounds
+set autoread                    "Reload files changed outside vim
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
+"turn on syntax highlighting
+syntax on
+
+" Change leader to a comma because the backslash is too far away
+" That means all \x commands turn into ,x
+" The mapleader has to be set before vundle starts loading all 
+" the plugins.
+let mapleader=","
+set timeout timeoutlen=1500
+
+" ================ Turn Off Swap Files ==============
+
+set noswapfile
+set nobackup
+set nowb
+
+" ================ Persistent Undo ==================
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
+endif
+
+" ================ Folds ============================
+
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+"
+" ================ Scrolling ========================
+
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+" ================ Search ===========================
+
+set incsearch       " Find the next match as we type the search
+set hlsearch        " Highlight searches by default
+set ignorecase      " Ignore case when searching...
+set smartcase       " ...unless we type a capital
+
+" ================ Indentation ======================
+
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
+
+filetype plugin on
+filetype indent on
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
+set linebreak    "Wrap lines at convenient points
+
+" ================ Custom Settings ========================
+
+" Window pane resizing
+nnoremap <silent> <Leader>[ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>] :exe "resize " . (winheight(0) * 2/3)<CR>
+
+" ================ Plugins ====================
+
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
