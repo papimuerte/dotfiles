@@ -32,6 +32,7 @@ syntax on
 " the plugins.
 let mapleader=","
 set timeout timeoutlen=1500
+set encoding=utf-8
 
 " ================ Turn Off Swap Files ==============
 
