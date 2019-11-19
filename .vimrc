@@ -132,11 +132,12 @@ call plug#begin('~/.vim/plugged')
 "Plug 'tpope/vim-commentary'
 "Plug 'tpope/vim-repeat'
 "Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-endwise'
 "Plug 'mileszs/ack.vim'
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'majutsushi/tagbar'
 "Plug 'godlygeek/tabular'
@@ -150,15 +151,17 @@ Plug 'scrooloose/nerdtree'
 Plug 'ngmy/vim-rubocop'
 "Plug 'vim-scripts/vim-rubyformat'
 "Plug 'w0rp/ale'
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
+Plug 'kien/ctrlp.vim'
+Plug 'ervandew/supertab'
 
 " Langs
 "Plug 'tpope/vim-markdown'
 "Plug 'fatih/vim-go'
 
 " Colour schemes
-Plug 'vim-scripts/Colour-Sampler-Pack'
-Plug 'chriskempson/base16-vim'
-Plug 'arcticicestudio/nord-vim'
+"Plug 'vim-scripts/Colour-Sampler-Pack'
+"Plug 'chriskempson/base16-vim'
+"Plug 'arcticicestudio/nord-vim'
 " End vim-plug shenanigans
 call plug#end()
